@@ -21,18 +21,34 @@ class _CreateAccountState extends State<CreateAccount> {
       backgroundColor: Color(0xff251F34),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Create Account'),
-          Text('Please fill the input below.'),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 20, 20, 8),
+            child: Text('Create Account',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 25
+              ),),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Text('Please fill the input below.',
+              style: TextStyle(
+                  color: Colors.grey[600],
+                  fontWeight: FontWeight.w400,
+                  fontSize: 14
+              ),),
+          ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10),
+            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
                   'E-mail',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  style: TextStyle(fontWeight: FontWeight.w300, fontSize: 13, color: Colors.white),
                 ),
                 SizedBox(
                   height: 10,
@@ -40,50 +56,52 @@ class _CreateAccountState extends State<CreateAccount> {
                 TextField(
                   keyboardType: TextInputType.emailAddress,
                   obscureText: false,
+                  cursorColor: Colors.white,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     fillColor: Color(0xfff3B324E),
                     filled: true,
-                    prefixIcon: SvgPicture.asset('images/icon_email.svg'),
+                    prefixIcon: Image.asset('images/icon_email.png'),
                   ),
                 ),
               ],
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10),
+            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
                   'Password',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  style: TextStyle(fontWeight: FontWeight.w300, fontSize: 13, color: Colors.white),
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 TextField(
                   obscureText: true,
+                  cursorColor: Colors.white,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     fillColor: Color(0xfff3B324E),
                     filled: true,
-                    prefixIcon: SvgPicture.asset('images/icon_lock.svg'),
+                    prefixIcon: Image.asset('images/icon_lock.png'),
                   ),
                 ),
               ],
             ),
           ),
-          RoundedButton(
-            btnText: 'SIGN UP',
-            color: Color(0xff14DAE2),
-            onPressed: (){
-              // Add login code
-            },
-          ),
-          Text('Forgot Password?',
-            style: TextStyle(
-                color: Color(0xff14DAE2)
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: RoundedButton(
+                btnText: 'SIGN UP',
+                color: Color(0xff14DAE2),
+                onPressed: (){
+                  // Add login code
+                },
+              ),
             ),
           ),
           SizedBox(
@@ -92,7 +110,11 @@ class _CreateAccountState extends State<CreateAccount> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Already have an account?'),
+              Text('Already have an account?',
+                style: TextStyle(
+                    color: Colors.grey[600],
+                    fontWeight: FontWeight.w400
+                ),),
               FlatButton(
                 onPressed: () {
                   Navigator.push(
