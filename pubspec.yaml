@@ -1,0 +1,42 @@
+name: loginkit
+description: Login Flow Template
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_svg: ^0.17.4
+  firebase_core: ^0.4.3+1
+  firebase_auth: ^0.15.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  assets:
+    - images/
+
+  fonts:
+     - family: Poppins
+       fonts:
+         - asset: fonts/Poppins-Regular.ttf
+         - asset: fonts/Poppins-SemiBold.ttf
+         - asset: fonts/Poppins-Bold.ttf
