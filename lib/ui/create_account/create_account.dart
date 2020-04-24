@@ -1,31 +1,30 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:loginkit/components/rounded_btn/rounded_btn.dart';
-import 'package:loginkit/ui/create_account/create_account.dart';
+import 'package:loginkit/ui/login/login.dart';
 
-class Login extends StatefulWidget {
+class CreateAccount extends StatefulWidget {
   @override
-  _LoginState createState() => _LoginState();
+  _CreateAccountState createState() => _CreateAccountState();
 }
 
-class _LoginState extends State<Login> {
+class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+          leading: _goBackButton(context),
+        backgroundColor: Color(0xff251F34),
+      ),
       backgroundColor: Color(0xff251F34),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
-            width: 175,
-            height: 175,
-            child: SvgPicture.asset('images/login.svg')
-          ),
-          Text('Login'),
-          Text('Please sign in to continue.'),
+          Text('Create Account'),
+          Text('Please fill the input below.'),
           Container(
             margin: EdgeInsets.symmetric(vertical: 10),
             child: Column(
@@ -40,13 +39,13 @@ class _LoginState extends State<Login> {
                 ),
                 TextField(
                   keyboardType: TextInputType.emailAddress,
-                    obscureText: false,
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        fillColor: Color(0xfff3B324E),
-                        filled: true,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    fillColor: Color(0xfff3B324E),
+                    filled: true,
                     prefixIcon: SvgPicture.asset('images/icon_email.svg'),
-                ),
+                  ),
                 ),
               ],
             ),
@@ -76,16 +75,16 @@ class _LoginState extends State<Login> {
             ),
           ),
           RoundedButton(
-            btnText: 'LOGIN',
+            btnText: 'SIGN UP',
             color: Color(0xff14DAE2),
             onPressed: (){
               // Add login code
             },
           ),
           Text('Forgot Password?',
-          style: TextStyle(
-            color: Color(0xff14DAE2)
-          ),
+            style: TextStyle(
+                color: Color(0xff14DAE2)
+            ),
           ),
           SizedBox(
             height: 100,
@@ -93,16 +92,16 @@ class _LoginState extends State<Login> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Dont have an account?'),
+              Text('Already have an account?'),
               FlatButton(
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => CreateAccount()));
+                          builder: (context) => Login()));
                 },
-                child: Text('Sign up',
-                  style: TextStyle(
+                child: Text('Sign in',
+                    style: TextStyle(
                       color: Color(0xff14DAE2),)
                 ),
               )
@@ -112,4 +111,12 @@ class _LoginState extends State<Login> {
       ),
     );
   }
+}
+
+Widget _goBackButton(BuildContext context) {
+  return IconButton(
+      icon: Icon(Icons.arrow_back, color: Colors.grey[350]),
+      onPressed: () {
+        Navigator.of(context).pop(true);
+      });
 }
