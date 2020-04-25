@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:loginkit/components/rounded_btn/rounded_btn.dart';
 import 'package:loginkit/ui/login/login.dart';
+import 'package:loginkit/ui/success/success.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -20,6 +21,7 @@ class _CreateAccountState extends State<CreateAccount> {
   Widget build(BuildContext context) {
     return ModalProgressHUD(
       inAsyncCall: showSpinner,
+      progressIndicator: ,
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
