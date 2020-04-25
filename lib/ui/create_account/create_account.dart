@@ -21,7 +21,6 @@ class _CreateAccountState extends State<CreateAccount> {
   Widget build(BuildContext context) {
     return ModalProgressHUD(
       inAsyncCall: showSpinner,
-      progressIndicator: ,
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
