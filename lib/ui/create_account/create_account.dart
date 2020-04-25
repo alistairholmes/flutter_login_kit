@@ -62,7 +62,11 @@ class _CreateAccountState extends State<CreateAccount> {
                     fillColor: Color(0xfff3B324E),
                     filled: true,
                     prefixIcon: Image.asset('images/icon_email.png'),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xff14DAE2), width: 2.0),
+                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
                   ),
+                ),
                 ),
               ],
             ),
@@ -87,6 +91,10 @@ class _CreateAccountState extends State<CreateAccount> {
                     fillColor: Color(0xfff3B324E),
                     filled: true,
                     prefixIcon: Image.asset('images/icon_lock.png'),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xff14DAE2), width: 2.0),
+                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                    ),
                   ),
                 ),
               ],
