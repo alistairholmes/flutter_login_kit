@@ -64,7 +64,7 @@ class _SuccessScreenState extends State<SuccessScreen> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text('You have successfully logged in.',
+            child: Text('You have logged in.',
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
