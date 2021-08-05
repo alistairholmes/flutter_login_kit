@@ -1,6 +1,8 @@
-# Flutter Login Kit
+# Flutter Login Kit 
 
 A starter template to get you up and running with firebase user authentication
+
+# <a href="https://www.buymeacoffee.com/W3brVDFlK"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=W3brVDFlK&button_colour=5F7FFF&font_colour=ffffff&font_family=Inter&outline_colour=000000&coffee_colour=FFDD00"></a>
 
 # Screenshots
 
